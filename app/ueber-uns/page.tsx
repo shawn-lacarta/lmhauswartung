@@ -13,16 +13,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="page-hero">
-        <div className="container page-hero-inner">
-          <div>
-            <p className="eyebrow">Über uns</p>
-            <h1>Ein erreichbarer Partner für Eigentümer und Verwaltungen.</h1>
-          </div>
-        </div>
-      </section>
-
       <section className="section alt about-intro-section">
+        <div className="container">
+          <p className="eyebrow">Über uns</p>
+        </div>
         <div className="container split">
           <div className="image-panel">
             <Image
