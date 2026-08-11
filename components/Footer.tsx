@@ -56,7 +56,9 @@ export function Footer() {
 
         <div className="footer-bottom">
           <span>Copyright © 2026 L.M. Hauswartung. Alle Rechte vorbehalten.</span>
-          <span>Rümlang / Zürich · Schweiz auf Anfrage</span>
+          <a href="https://8080.design" target="_blank" rel="noreferrer">
+            Designed and Developed by 8080.design
+          </a>
         </div>
       </div>
     </footer>
