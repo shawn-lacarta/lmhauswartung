@@ -54,14 +54,6 @@ export default function Home() {
                 Leistungen ansehen
               </ButtonLink>
             </div>
-            <div className="hero-note">
-              <span className="note-mark">LM</span>
-              <p>
-                <strong>Direkt, lokal und unkompliziert.</strong>
-                <br />
-                Ein Ansprechpartner für die laufende Betreuung Ihrer Liegenschaft.
-              </p>
-            </div>
           </div>
 
           <div className="hero-visual" aria-label="Bildkomposition Liegenschaftsbetreuung">
@@ -78,7 +70,7 @@ export default function Home() {
               <span>Für Eigentümer und Verwaltungen</span>
               <strong>Hauswartung aus Rümlang</strong>
               <ul className="hero-service-list">
-                {services.slice(0, 3).map((service) => (
+                {services.map((service) => (
                   <li key={service.slug}>
                     {service.title}
                     <a href={`/dienstleistungen/${service.slug}`}>Details</a>

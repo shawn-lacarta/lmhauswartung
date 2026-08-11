@@ -271,32 +271,6 @@ p {
   margin-top: 30px;
 }
 
-.hero-note {
-  display: grid;
-  grid-template-columns: 56px minmax(0, 1fr);
-  gap: 15px;
-  max-width: 560px;
-  margin-top: 36px;
-  border-top: 1px solid var(--line);
-  padding-top: 22px;
-  color: var(--muted);
-}
-
-.hero-note strong {
-  color: var(--ink);
-}
-
-.note-mark {
-  display: grid;
-  width: 46px;
-  height: 46px;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--primary-2);
-  color: #fff;
-  font-weight: 900;
-}
-
 .hero-visual {
   position: relative;
   min-height: 620px;
@@ -1084,10 +1058,6 @@ textarea {
   .button,
   .button-secondary {
     width: 100%;
-  }
-
-  .hero-note {
-    display: none;
   }
 
   .hero-visual {
