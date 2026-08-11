@@ -194,7 +194,7 @@ export default function Home() {
             </div>
             <div className="metric">
               <span>Öffnungszeiten</span>
-              <strong>Mo - Fr 08:00 - 17:00</strong>
+              <strong>Mo - Fr 08:00 - 17:00, Samstag nach Vereinbarung</strong>
             </div>
           </div>
         </div>
