@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
-import { ServiceCard } from "@/components/ServiceCard";
 import { services } from "@/lib/site-data";
 
 export const metadata: Metadata = {
@@ -25,14 +24,6 @@ export default function ServicesPage() {
             Verwaltungen, Vermieter und Privatkunden. Lokal in Zürich/Rümlang und schweizweit auf
             Anfrage.
           </p>
-        </div>
-      </section>
-
-      <section className="section alt">
-        <div className="container service-bento">
-          {services.map((service, index) => (
-            <ServiceCard key={service.slug} service={service} index={index} />
-          ))}
         </div>
       </section>
 
