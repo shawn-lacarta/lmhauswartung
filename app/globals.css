@@ -366,6 +366,10 @@ p {
   background: var(--cream);
 }
 
+.about-intro-section {
+  padding-top: 72px;
+}
+
 .section.dark {
   background: var(--primary-2);
   color: #fff;

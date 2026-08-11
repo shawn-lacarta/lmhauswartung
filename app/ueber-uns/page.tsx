@@ -13,20 +13,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="page-hero">
-        <div className="container page-hero-inner">
-          <div>
-            <p className="eyebrow">Über uns</p>
-            <h1>Persönliche Hauswartung mit Verantwortung.</h1>
-          </div>
-          <p>
-            Ein kleines engagiertes Team aus Rümlang, das Liegenschaften sorgfältig betreut und
-            Einsätze je nach Anfrage auch schweizweit plant.
-          </p>
-        </div>
-      </section>
-
-      <section className="section alt">
+      <section className="section alt about-intro-section">
         <div className="container split">
           <div className="image-panel">
             <Image
@@ -37,7 +24,6 @@ export default function AboutPage() {
             />
           </div>
           <div>
-            <p className="eyebrow">Wer wir sind</p>
             <h2>Ein erreichbarer Partner für Eigentümer und Verwaltungen.</h2>
             <p className="muted">
               Für uns bedeutet Hauswartung, Liegenschaften aufmerksam zu betreuen, kleine Dinge früh
