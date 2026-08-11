@@ -693,6 +693,11 @@ p {
   background: var(--surface);
 }
 
+.value-card .service-number {
+  display: block;
+  margin-bottom: 18px;
+}
+
 .value-card svg {
   color: var(--primary);
 }

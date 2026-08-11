@@ -53,10 +53,6 @@ export default function AboutPage() {
               <p className="eyebrow">Arbeitsweise</p>
               <h2>Worauf Sie sich verlassen können.</h2>
             </div>
-            <p>
-              Wir arbeiten ruhig, verbindlich und mit Blick für die kleinen Dinge, die eine
-              gepflegte Liegenschaft ausmachen.
-            </p>
           </div>
           <div className="value-timeline">
             {values.map((value, index) => (
