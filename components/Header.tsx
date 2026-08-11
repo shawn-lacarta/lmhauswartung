@@ -21,9 +21,6 @@ export function Header() {
         </nav>
 
         <div className="header-actions">
-          <a href={company.phoneHref} className="phone-link">
-            {company.phone}
-          </a>
           <ButtonLink href="/kontakt" icon={ArrowUpRight}>
             Offerte anfragen
           </ButtonLink>
