@@ -103,25 +103,37 @@ textarea {
   justify-self: center;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 5px;
-  background: rgba(255, 255, 255, 0.74);
+  gap: 34px;
 }
 
 .nav a {
-  border-radius: 999px;
-  padding: 8px 16px;
+  position: relative;
+  padding: 8px 0;
   color: var(--ink-soft);
   font-size: 0.95rem;
   font-weight: 750;
-  transition: background 160ms ease, color 160ms ease;
+  transition: color 160ms ease;
+}
+
+.nav a::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: var(--primary);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 160ms ease;
 }
 
 .nav a:hover {
-  background: var(--primary-3);
   color: var(--primary-2);
+}
+
+.nav a:hover::after {
+  transform: scaleX(1);
 }
 
 .header-actions {
