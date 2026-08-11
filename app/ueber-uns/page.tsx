@@ -24,6 +24,7 @@ export default function AboutPage() {
             />
           </div>
           <div>
+            <p className="eyebrow">Über uns</p>
             <h2>Ein erreichbarer Partner für Eigentümer und Verwaltungen.</h2>
             <p className="muted">
               Für uns bedeutet Hauswartung, Liegenschaften aufmerksam zu betreuen, kleine Dinge früh
