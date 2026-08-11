@@ -243,11 +243,7 @@ p {
   position: relative;
   overflow: hidden;
   padding: 74px 0 42px;
-  background:
-    linear-gradient(90deg, rgba(219, 233, 223, 0.72) 0 1px, transparent 1px),
-    linear-gradient(180deg, rgba(219, 233, 223, 0.52) 0 1px, transparent 1px),
-    var(--cream);
-  background-size: 88px 88px;
+  background: linear-gradient(180deg, var(--cream) 0%, var(--canvas) 100%);
 }
 
 .hero-grid {

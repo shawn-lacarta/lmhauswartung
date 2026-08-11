@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { Nunito_Sans, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { company } from "@/lib/site-data";
 
-const headingFont = Manrope({
+const headingFont = Nunito_Sans({
   subsets: ["latin"],
   variable: "--font-heading",
   display: "swap"
 });
 
-const bodyFont = Inter({
+const bodyFont = Source_Sans_3({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap"
