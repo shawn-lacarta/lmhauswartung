@@ -90,10 +90,6 @@ export default function Home() {
               <p className="eyebrow">Leistungen</p>
               <h2>Vier Bereiche, ein sauberer Ablauf.</h2>
             </div>
-            <p>
-              Die wichtigsten Aufgaben rund um Ihre Liegenschaft sind klar gebündelt. So finden Sie
-              schnell die passende Unterstützung und können direkt eine Offerte anfragen.
-            </p>
           </div>
           <div className="service-bento">
             {services.map((service, index) => (
