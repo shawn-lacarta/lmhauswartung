@@ -480,6 +480,11 @@ p {
   aspect-ratio: 5 / 4;
 }
 
+.image-stack {
+  display: grid;
+  gap: 18px;
+}
+
 .benefit-list {
   display: grid;
   gap: 0;

@@ -14,19 +14,20 @@ export default function AboutPage() {
   return (
     <>
       <section className="section alt about-intro-section">
-        <div className="container">
-          <p className="eyebrow">Über uns</p>
-        </div>
         <div className="container split">
-          <div className="image-panel">
-            <Image
-              src="/images/ueber-uns.jpg"
-              alt="Gepflegte Wohnliegenschaft als Beispiel für professionelle Hauswartung"
-              fill
-              sizes="(max-width: 1080px) 100vw, 48vw"
-            />
+          <div className="image-stack">
+            <p className="eyebrow">Über uns</p>
+            <div className="image-panel">
+              <Image
+                src="/images/ueber-uns.jpg"
+                alt="Gepflegte Wohnliegenschaft als Beispiel für professionelle Hauswartung"
+                fill
+                sizes="(max-width: 1080px) 100vw, 48vw"
+              />
+            </div>
           </div>
           <div>
+            <h2>Ein erreichbarer Partner für Eigentümer und Verwaltungen.</h2>
             <p className="muted">
               Für uns bedeutet Hauswartung, Liegenschaften aufmerksam zu betreuen, kleine Dinge früh
               zu erkennen und Arbeiten sauber auszuführen.
