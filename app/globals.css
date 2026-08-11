@@ -688,6 +688,7 @@ textarea {
 
 .footer-brand img {
   width: 190px;
+  height: auto;
   margin-bottom: 18px;
 }
 
