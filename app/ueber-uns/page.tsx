@@ -28,10 +28,6 @@ export default function AboutPage() {
           </div>
           <div>
             <h2>Ein erreichbarer Partner für Eigentümer und Verwaltungen.</h2>
-            <p className="muted">
-              Für uns bedeutet Hauswartung, Liegenschaften aufmerksam zu betreuen, kleine Dinge früh
-              zu erkennen und Arbeiten sauber auszuführen.
-            </p>
             <ul className="check-list">
               <li>
                 <CheckCircle2 aria-hidden="true" size={18} />
