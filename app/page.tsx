@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ArrowRight, CheckCircle2, MapPin, Phone } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { ServiceCard } from "@/components/ServiceCard";
-import { company, serviceAreas, services, trustItems } from "@/lib/site-data";
+import { company, serviceAreas, services } from "@/lib/site-data";
 
 export default function Home() {
   const structuredData = {
@@ -79,17 +79,6 @@ export default function Home() {
               </ul>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="trust-strip" aria-label="Vertrauensmerkmale">
-        <div className="container trust-strip-inner">
-          {trustItems.map((item) => (
-            <div className="trust-strip-item" key={item.title}>
-              <strong>{item.title}</strong>
-              <span>{item.text}</span>
-            </div>
-          ))}
         </div>
       </section>
 

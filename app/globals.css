@@ -353,43 +353,6 @@ p {
   color: var(--primary);
 }
 
-.trust-strip {
-  position: relative;
-  z-index: 2;
-  margin-top: -1px;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: var(--canvas);
-}
-
-.trust-strip-inner {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.trust-strip-item {
-  min-height: 118px;
-  border-right: 1px solid var(--line);
-  padding: 25px 22px;
-}
-
-.trust-strip-item:last-child {
-  border-right: 0;
-}
-
-.trust-strip-item strong {
-  display: block;
-  color: var(--ink);
-  font-family: var(--font-heading), Arial, sans-serif;
-  font-size: 1.08rem;
-}
-
-.trust-strip-item span {
-  display: block;
-  margin-top: 6px;
-  color: var(--muted);
-}
-
 .section {
   padding: 102px 0;
 }
@@ -1070,16 +1033,6 @@ textarea {
 
   .hero-card {
     width: calc(100% - 22px);
-  }
-
-  .trust-strip-inner {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .trust-strip-item {
-    min-height: 126px;
-    border-bottom: 1px solid var(--line);
-    padding: 20px 16px;
   }
 
   .section {
