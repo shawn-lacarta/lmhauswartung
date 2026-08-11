@@ -1086,11 +1086,11 @@ textarea {
   }
 
   .hero-photo {
-    inset: 0 0 84px 0;
+    inset: 0;
   }
 
   .hero-card {
-    width: calc(100% - 22px);
+    display: none;
   }
 
   .section {
