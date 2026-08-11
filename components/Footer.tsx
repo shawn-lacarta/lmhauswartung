@@ -12,7 +12,7 @@ export function Footer() {
             <Image src="/images/logo.png" alt="Logo von L.M. Hauswartung" width={466} height={186} />
             <p>
               Hauswartung, Reinigung, Gartenpflege und Unterhalt für gepflegte Liegenschaften.
-              Lokal in Rümlang/Zürich, schweizweit auf Anfrage.
+              Regional im Einsatz, schweizweit nach Vereinbarung.
             </p>
           </div>
 
