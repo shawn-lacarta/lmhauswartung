@@ -17,11 +17,6 @@ export default function ServicesPage() {
             <p className="eyebrow">Leistungen</p>
             <h1>Alles für gepflegte Liegenschaften.</h1>
           </div>
-          <p>
-            Klare Leistungen, kurze Abstimmung und zuverlässige Ausführung für Eigentümer,
-            Verwaltungen, Vermieter und Privatkunden. Lokal in Zürich/Rümlang und schweizweit auf
-            Anfrage.
-          </p>
         </div>
       </section>
 

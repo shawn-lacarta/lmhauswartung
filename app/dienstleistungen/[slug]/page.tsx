@@ -43,7 +43,6 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             <p className="eyebrow">Dienstleistung</p>
             <h1>{service.title}</h1>
           </div>
-          <p>{service.summary}</p>
         </div>
       </section>
 
