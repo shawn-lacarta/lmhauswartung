@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ArrowRight, CheckCircle2, MapPin, Phone } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { ServiceCard } from "@/components/ServiceCard";
-import { company, serviceAreas, services } from "@/lib/site-data";
+import { company, services } from "@/lib/site-data";
 
 export default function Home() {
   const structuredData = {
@@ -148,25 +148,24 @@ export default function Home() {
         <div className="container region-panel">
           <div>
             <p className="eyebrow">Einsatzgebiet</p>
-            <h2>Rümlang als Ausgangspunkt. Einsätze auch schweizweit.</h2>
+            <h2>Von Zürich aus im Einsatz.</h2>
             <p className="muted">
-              L.M. Hauswartung ist in Rümlang zuhause und betreut viele Liegenschaften in Zürich
-              und Umgebung. Auf Anfrage planen wir Einsätze auch in anderen Regionen der Schweiz.
+              L.M. Hauswartung betreut Liegenschaften lokal in Zürich und Umgebung. Weitere Einsätze
+              prüfen wir unkompliziert nach Anfrage und Distanz.
             </p>
-            <ul className="area-list">
-              {serviceAreas.map((area) => (
-                <li key={area}>{area}</li>
-              ))}
-            </ul>
           </div>
-          <div className="map-card" aria-label="Einsatzgebiet Rümlang, Zürich und schweizweit auf Anfrage">
-            <div className="map-pin main">
-              <strong>Rümlang</strong>
-              <span>{company.address}</span>
+          <div className="region-summary" aria-label="Standort und Einsatzgebiet">
+            <div>
+              <span>Sitz</span>
+              <strong>{company.address}</strong>
             </div>
-            <div className="map-pin secondary">
-              <strong>Schweizweit</strong>
-              <span>Auf Anfrage und nach Absprache</span>
+            <div>
+              <span>Kerngebiet</span>
+              <strong>Zürich und Umgebung</strong>
+            </div>
+            <div>
+              <span>Weitere Einsätze</span>
+              <strong>Nach Anfrage und Absprache</strong>
             </div>
           </div>
         </div>

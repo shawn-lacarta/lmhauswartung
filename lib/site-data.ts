@@ -135,11 +135,3 @@ export const values = [
     icon: Phone
   }
 ];
-
-export const serviceAreas = [
-  "Rümlang",
-  "Zürich",
-  "Zürich Umgebung",
-  "Deutschschweiz auf Anfrage",
-  "Schweizweit nach Absprache"
-];
