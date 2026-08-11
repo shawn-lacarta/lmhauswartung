@@ -7,7 +7,7 @@ import { values } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Über uns",
   description:
-    "Lernen Sie L.M. Hauswartung aus Rümlang kennen: persönliche Betreuung, Fachkompetenz und zuverlässige Hauswartung in Zürich und Umgebung."
+    "Lernen Sie L.M. Hauswartung aus Rümlang kennen: persönliche Betreuung, Fachkompetenz und zuverlässige Hauswartung in Zürich sowie schweizweit auf Anfrage."
 };
 
 export default function AboutPage() {
@@ -20,8 +20,8 @@ export default function AboutPage() {
             <h1>Persönliche Hauswartung mit Verantwortung.</h1>
           </div>
           <p>
-            Ein kleines engagiertes Team aus der Region Zürich, das Liegenschaften sorgfältig
-            betreut und den direkten Austausch schätzt.
+            Ein kleines engagiertes Team aus Rümlang, das Liegenschaften sorgfältig betreut und
+            Einsätze je nach Anfrage auch schweizweit plant.
           </p>
         </div>
       </section>
@@ -31,7 +31,7 @@ export default function AboutPage() {
           <div className="image-panel">
             <Image
               src="/images/ueber-uns.jpg"
-              alt="Gepflegte Wohnliegenschaft in der Region Zürich"
+              alt="Gepflegte Wohnliegenschaft als Beispiel für professionelle Hauswartung"
               fill
               sizes="(max-width: 1080px) 100vw, 48vw"
             />
@@ -54,7 +54,7 @@ export default function AboutPage() {
               </li>
               <li>
                 <CheckCircle2 aria-hidden="true" size={18} />
-                <span>Regional verankert in Rümlang und Zürich</span>
+                <span>In Rümlang verankert, schweizweit auf Anfrage unterwegs</span>
               </li>
             </ul>
           </div>

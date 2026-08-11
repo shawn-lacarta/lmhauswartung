@@ -6,7 +6,7 @@ import { company } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Kontakt",
   description:
-    "Kontaktieren Sie L.M. Hauswartung in Rümlang für Hauswartung, Reinigung, Gartenpflege, Solardachpflege und Kleinreparaturen im Raum Zürich."
+    "Kontaktieren Sie L.M. Hauswartung in Rümlang für Hauswartung, Reinigung, Gartenpflege, Solardachpflege und Kleinreparaturen. Einsätze in Zürich und schweizweit auf Anfrage."
 };
 
 export default function ContactPage() {

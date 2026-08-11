@@ -20,18 +20,19 @@ const bodyFont = Source_Sans_3({
 export const metadata: Metadata = {
   metadataBase: new URL(company.url),
   title: {
-    default: "L.M. Hauswartung | Hauswartung Zürich & Rümlang",
+    default: "L.M. Hauswartung | Hauswartung aus Rümlang",
     template: "%s | L.M. Hauswartung"
   },
   description:
-    "Professionelle Hauswartung, Reinigung, Gartenpflege, Solardachpflege und Kleinreparaturen in Zürich, Rümlang und Umgebung.",
+    "Professionelle Hauswartung, Reinigung, Gartenpflege, Solardachpflege und Kleinreparaturen aus Rümlang. Einsätze in Zürich und schweizweit auf Anfrage.",
   keywords: [
     "Hauswartung Zürich",
     "Hauswartungsfirma Zürich",
     "Hauswartung Rümlang",
     "Liegenschaftsunterhalt Zürich",
     "Gebäudereinigung Zürich",
-    "Gartenpflege Zürich"
+    "Gartenpflege Zürich",
+    "Hauswartung Schweiz"
   ],
   icons: {
     icon: [
@@ -41,9 +42,9 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png"
   },
   openGraph: {
-    title: "L.M. Hauswartung | Hauswartung Zürich & Rümlang",
+    title: "L.M. Hauswartung | Hauswartung aus Rümlang",
     description:
-      "Persönliche und zuverlässige Betreuung für Liegenschaften, Wohnhäuser und Aussenbereiche im Raum Zürich.",
+      "Persönliche und zuverlässige Betreuung für Liegenschaften, Wohnhäuser und Aussenbereiche in Zürich und schweizweit auf Anfrage.",
     url: company.url,
     siteName: "L.M. Hauswartung",
     locale: "de_CH",

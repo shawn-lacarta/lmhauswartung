@@ -8,7 +8,7 @@ import { services } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Dienstleistungen",
   description:
-    "Reinigung & Unterhalt, Gartenpflege, Solardachpflege und Kleinreparaturen von L.M. Hauswartung in Zürich und Rümlang."
+    "Reinigung & Unterhalt, Gartenpflege, Solardachpflege und Kleinreparaturen von L.M. Hauswartung aus Rümlang. In Zürich und schweizweit auf Anfrage."
 };
 
 export default function ServicesPage() {
@@ -22,7 +22,8 @@ export default function ServicesPage() {
           </div>
           <p>
             Klare Leistungen, kurze Abstimmung und zuverlässige Ausführung für Eigentümer,
-            Verwaltungen, Vermieter und Privatkunden im Raum Zürich.
+            Verwaltungen, Vermieter und Privatkunden. Lokal in Zürich/Rümlang und schweizweit auf
+            Anfrage.
           </p>
         </div>
       </section>

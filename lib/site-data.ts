@@ -113,7 +113,7 @@ export const trustItems = [
   },
   {
     title: "Regional",
-    text: "Aus Rümlang für Zürich und Umgebung.",
+    text: "Aus Rümlang, regional stark und schweizweit auf Anfrage.",
     icon: MapPin
   }
 ];
@@ -136,4 +136,10 @@ export const values = [
   }
 ];
 
-export const serviceAreas = ["Rümlang", "Zürich", "Glattal", "Zürich Umgebung", "Nach Vereinbarung"];
+export const serviceAreas = [
+  "Rümlang",
+  "Zürich",
+  "Zürich Umgebung",
+  "Deutschschweiz auf Anfrage",
+  "Schweizweit nach Absprache"
+];

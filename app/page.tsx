@@ -19,7 +19,7 @@ export default function Home() {
       addressLocality: "Rümlang",
       addressCountry: "CH"
     },
-    areaServed: ["Rümlang", "Zürich", "Zürich Umgebung"],
+    areaServed: ["Rümlang", "Zürich", "Zürich Umgebung", "Schweiz nach Absprache"],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -39,12 +39,13 @@ export default function Home() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">
-              <MapPin aria-hidden="true" size={16} /> Hauswartung · Zürich & Umgebung
+              <MapPin aria-hidden="true" size={16} /> Hauswartung · Zürich · Schweiz auf Anfrage
             </p>
             <h1>Ihre Liegenschaft. Zuverlässig betreut.</h1>
             <p className="lead">
               L.M. Hauswartung kümmert sich um Reinigung, Gartenpflege, Solardachpflege und
-              Kleinreparaturen für gepflegte Wohnliegenschaften in Rümlang, Zürich und Umgebung.
+              Kleinreparaturen für gepflegte Wohnliegenschaften in Rümlang, Zürich und auf Anfrage
+              in der ganzen Schweiz.
             </p>
             <div className="hero-actions">
               <ButtonLink href="/kontakt" icon={ArrowRight}>
@@ -150,11 +151,11 @@ export default function Home() {
       <section className="section">
         <div className="container region-panel">
           <div>
-            <p className="eyebrow">Regionalität</p>
-            <h2>Rümlang als Ausgangspunkt. Zürich im Fokus.</h2>
+            <p className="eyebrow">Einsatzgebiet</p>
+            <h2>Rümlang als Ausgangspunkt. Einsätze auch schweizweit.</h2>
             <p className="muted">
-              L.M. Hauswartung ist lokal verankert und betreut Liegenschaften in Rümlang, Zürich
-              und Umgebung. Die Nähe hilft bei Abstimmung, Planung und zuverlässigen Einsätzen.
+              L.M. Hauswartung ist in Rümlang zuhause und betreut viele Liegenschaften in Zürich
+              und Umgebung. Auf Anfrage planen wir Einsätze auch in anderen Regionen der Schweiz.
             </p>
             <ul className="area-list">
               {serviceAreas.map((area) => (
@@ -162,14 +163,14 @@ export default function Home() {
               ))}
             </ul>
           </div>
-          <div className="map-card" aria-label="Einsatzgebiet Rümlang, Zürich und Umgebung">
+          <div className="map-card" aria-label="Einsatzgebiet Rümlang, Zürich und schweizweit auf Anfrage">
             <div className="map-pin main">
               <strong>Rümlang</strong>
               <span>{company.address}</span>
             </div>
             <div className="map-pin secondary">
-              <strong>Zürich & Umgebung</strong>
-              <span>Einsätze nach Absprache</span>
+              <strong>Schweizweit</strong>
+              <span>Auf Anfrage und nach Absprache</span>
             </div>
           </div>
         </div>

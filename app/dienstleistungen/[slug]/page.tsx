@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
 
   return {
     title: service.title,
-    description: `${service.title} von L.M. Hauswartung in Zürich und Rümlang. ${service.summary}`
+    description: `${service.title} von L.M. Hauswartung aus Rümlang. Einsätze in Zürich und schweizweit auf Anfrage. ${service.summary}`
   };
 }
 
