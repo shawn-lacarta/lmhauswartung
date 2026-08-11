@@ -706,6 +706,108 @@ p {
   align-items: start;
 }
 
+.contact-page {
+  display: grid;
+  gap: 22px;
+}
+
+.contact-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.contact-card {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px;
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(47, 111, 78, 0.28);
+  box-shadow: var(--shadow);
+}
+
+.contact-card.primary {
+  background: var(--primary-2);
+  color: #fff;
+}
+
+.contact-card-icon {
+  display: inline-flex;
+  width: 54px;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--primary-3);
+  color: var(--primary);
+}
+
+.contact-card.primary .contact-card-icon {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--secondary-2);
+}
+
+.contact-card span span,
+.contact-info-card div {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.contact-card.primary span span {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.contact-card strong,
+.contact-info-card strong {
+  display: block;
+  margin-top: 7px;
+  color: var(--ink);
+  font-family: var(--font-heading), Arial, sans-serif;
+  font-size: clamp(1.34rem, 2.4vw, 2rem);
+  line-height: 1.12;
+  text-transform: none;
+  overflow-wrap: anywhere;
+}
+
+.contact-card.primary strong {
+  color: #fff;
+}
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--line);
+}
+
+.contact-info-card {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+  padding: 28px;
+  background: var(--cream);
+}
+
+.contact-info-card svg {
+  color: var(--primary);
+}
+
 .form {
   display: grid;
   gap: 18px;
@@ -921,6 +1023,11 @@ textarea {
   }
 
   .value-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-options,
+  .contact-info-grid {
     grid-template-columns: 1fr;
   }
 }

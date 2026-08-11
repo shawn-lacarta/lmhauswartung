@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, MapPin, Phone } from "lucide-react";
-import { ContactForm } from "@/components/ContactForm";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { company } from "@/lib/site-data";
 
 export const metadata: Metadata = {
@@ -15,48 +14,57 @@ export default function ContactPage() {
       <section className="page-hero">
         <div className="container page-hero-inner">
           <div>
-            <p className="eyebrow">Offerte anfragen</p>
-            <h1>Einfach schildern, worum es geht.</h1>
+            <p className="eyebrow">Kontakt</p>
+            <h1>Direkt erreichbar für Ihre Liegenschaft.</h1>
           </div>
           <p>
-            Schreiben Sie uns kurz, worum es geht. Wir melden uns persönlich und klären die nächsten
-            Schritte unkompliziert.
+            Rufen Sie uns an oder schreiben Sie per E-Mail. Wir melden uns persönlich und klären die
+            nächsten Schritte unkompliziert.
           </p>
         </div>
       </section>
 
       <section className="section alt">
-        <div className="container contact-layout">
-          <ContactForm />
-
-          <aside className="contact-panel" aria-label="Kontaktdaten">
-            <h2>Direkt erreichbar</h2>
-            <p>Für schnelle Abklärungen erreichen Sie L.M. Hauswartung telefonisch oder per E-Mail.</p>
-            <a href={company.phoneHref} className="contact-line">
-              <Phone aria-hidden="true" size={22} />
+        <div className="container contact-page">
+          <div className="contact-options" aria-label="Kontaktmöglichkeiten">
+            <a href={company.phoneHref} className="contact-card primary">
+              <span className="contact-card-icon">
+                <Phone aria-hidden="true" size={24} />
+              </span>
               <span>
-                Telefon
+                <span>Telefon</span>
                 <strong>{company.phone}</strong>
               </span>
             </a>
-            <a href={company.emailHref} className="contact-line">
-              <Mail aria-hidden="true" size={22} />
+
+            <a href={company.emailHref} className="contact-card">
+              <span className="contact-card-icon">
+                <Mail aria-hidden="true" size={24} />
+              </span>
               <span>
-                E-Mail
+                <span>E-Mail</span>
                 <strong>{company.email}</strong>
               </span>
             </a>
-            <p className="contact-line">
-              <MapPin aria-hidden="true" size={22} />
-              <span>
+          </div>
+
+          <div className="contact-info-grid">
+            <div className="contact-info-card">
+              <MapPin aria-hidden="true" size={24} />
+              <div>
                 Adresse
                 <strong>{company.address}</strong>
-              </span>
-            </p>
-            <p>
-              Öffnungszeiten: Montag bis Freitag 08:00 - 17:00. Samstag nach Vereinbarung.
-            </p>
-          </aside>
+              </div>
+            </div>
+
+            <div className="contact-info-card">
+              <Clock aria-hidden="true" size={24} />
+              <div>
+                Öffnungszeiten
+                <strong>{company.hours}</strong>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>
