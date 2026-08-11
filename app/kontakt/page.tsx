@@ -14,8 +14,10 @@ export default function ContactPage() {
     <>
       <section className="page-hero">
         <div className="container page-hero-inner">
-          <p className="eyebrow">Kontakt</p>
-          <h1>Unverbindliche Anfrage für Ihre Liegenschaft.</h1>
+          <div>
+            <p className="eyebrow">Offerte anfragen</p>
+            <h1>Einfach schildern, worum es geht.</h1>
+          </div>
           <p>
             Schreiben Sie uns kurz, worum es geht. Wir melden uns persönlich und klären die nächsten
             Schritte unkompliziert.

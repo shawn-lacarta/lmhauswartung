@@ -8,7 +8,7 @@ export function ContactForm() {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
     const body = [
-      `Vorname / Name: ${form.get("name")}`,
+      `Name: ${form.get("name")}`,
       `Firma: ${form.get("company") || "-"}`,
       `E-Mail: ${form.get("email")}`,
       `Telefon: ${form.get("phone") || "-"}`,
@@ -26,7 +26,7 @@ export function ContactForm() {
     <form className="form" onSubmit={handleSubmit}>
       <div className="form-grid">
         <div className="field">
-          <label htmlFor="name">Vorname / Name</label>
+          <label htmlFor="name">Name</label>
           <input id="name" name="name" autoComplete="name" required />
         </div>
         <div className="field">
@@ -47,7 +47,7 @@ export function ContactForm() {
             {services.map((service) => (
               <option key={service.slug}>{service.title}</option>
             ))}
-            <option>Andere Anfrage</option>
+            <option>Allgemeine Anfrage</option>
           </select>
         </div>
         <div className="field full">

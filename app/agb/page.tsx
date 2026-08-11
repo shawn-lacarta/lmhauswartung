@@ -62,8 +62,10 @@ export default function TermsPage() {
     <>
       <section className="page-hero">
         <div className="container page-hero-inner">
-          <p className="eyebrow">AGB</p>
-          <h1>Allgemeine Geschäftsbedingungen</h1>
+          <div>
+            <p className="eyebrow">AGB</p>
+            <h1>Allgemeine Geschäftsbedingungen</h1>
+          </div>
           <p>Die wichtigsten Rahmenbedingungen für Dienstleistungen von L.M. Hauswartung.</p>
         </div>
       </section>

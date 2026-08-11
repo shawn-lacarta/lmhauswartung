@@ -39,8 +39,10 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
     <>
       <section className="page-hero">
         <div className="container page-hero-inner">
-          <p className="eyebrow">Dienstleistung</p>
-          <h1>{service.title}</h1>
+          <div>
+            <p className="eyebrow">Dienstleistung</p>
+            <h1>{service.title}</h1>
+          </div>
           <p>{service.summary}</p>
         </div>
       </section>
@@ -48,7 +50,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       <section className="section alt">
         <div className="container split">
           <div className="image-panel">
-            <Image src={service.image} alt={service.alt} width={900} height={640} priority />
+            <Image src={service.image} alt={service.alt} fill sizes="(max-width: 1080px) 100vw, 48vw" priority />
           </div>
           <div>
             <h2>Was wir übernehmen</h2>

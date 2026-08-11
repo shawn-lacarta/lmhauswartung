@@ -8,7 +8,7 @@ import { services } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Dienstleistungen",
   description:
-    "Reinigung & Unterhalt, Solardachpflege, Gartenpflege und Kleinreparaturen von L.M. Hauswartung in Zürich und Rümlang."
+    "Reinigung & Unterhalt, Gartenpflege, Solardachpflege und Kleinreparaturen von L.M. Hauswartung in Zürich und Rümlang."
 };
 
 export default function ServicesPage() {
@@ -16,31 +16,33 @@ export default function ServicesPage() {
     <>
       <section className="page-hero">
         <div className="container page-hero-inner">
-          <p className="eyebrow">Dienstleistungen</p>
-          <h1>Hauswartung, Reinigung und Unterhalt aus einer Hand.</h1>
+          <div>
+            <p className="eyebrow">Leistungen</p>
+            <h1>Alles für gepflegte Liegenschaften.</h1>
+          </div>
           <p>
-            L.M. Hauswartung kombiniert persönliches Engagement mit fachgerechter Ausführung. Die
-            Leistungen werden passend zur Liegenschaft und nach Absprache geplant.
+            Klare Leistungen, kurze Abstimmung und zuverlässige Ausführung für Eigentümer,
+            Verwaltungen, Vermieter und Privatkunden im Raum Zürich.
           </p>
         </div>
       </section>
 
       <section className="section alt">
-        <div className="container services-grid">
-          {services.map((service) => (
-            <ServiceCard key={service.slug} service={service} />
+        <div className="container service-bento">
+          {services.map((service, index) => (
+            <ServiceCard key={service.slug} service={service} index={index} />
           ))}
         </div>
       </section>
 
       <section className="section">
-        <div className="container detail-list">
+        <div className="container service-detail-grid">
           {services.map((service) => (
             <article className="service-detail" id={service.slug} key={service.slug}>
               <div className="image-panel">
-                <Image src={service.image} alt={service.alt} width={900} height={640} />
+                <Image src={service.image} alt={service.alt} fill sizes="(max-width: 720px) 100vw, 40vw" />
               </div>
-              <div>
+              <div className="service-detail-content">
                 <p className="eyebrow">{service.title}</p>
                 <h2>{service.title}</h2>
                 <p className="muted">{service.description}</p>
@@ -54,7 +56,7 @@ export default function ServicesPage() {
                 </ul>
                 <div className="section-actions">
                   <ButtonLink href="/kontakt" icon={ArrowRight} variant="light">
-                    Unverbindlich anfragen
+                    Offerte anfragen
                   </ButtonLink>
                 </div>
               </div>

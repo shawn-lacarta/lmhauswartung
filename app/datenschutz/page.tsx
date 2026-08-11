@@ -33,8 +33,10 @@ export default function PrivacyPage() {
     <>
       <section className="page-hero">
         <div className="container page-hero-inner">
-          <p className="eyebrow">Datenschutz</p>
-          <h1>Datenschutzerklärung</h1>
+          <div>
+            <p className="eyebrow">Datenschutz</p>
+            <h1>Datenschutzerklärung</h1>
+          </div>
           <p>Der Schutz Ihrer persönlichen Daten ist uns wichtig.</p>
         </div>
       </section>

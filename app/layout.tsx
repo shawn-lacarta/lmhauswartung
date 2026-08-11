@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Montserrat, Source_Sans_3 } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { company } from "@/lib/site-data";
 
-const headingFont = Montserrat({
+const headingFont = Manrope({
   subsets: ["latin"],
   variable: "--font-heading",
   display: "swap"
 });
 
-const bodyFont = Source_Sans_3({
+const bodyFont = Inter({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap"

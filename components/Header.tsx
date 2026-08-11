@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, Phone } from "lucide-react";
+import { ArrowUpRight, Menu } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { company, navigation } from "@/lib/site-data";
 
@@ -22,10 +22,9 @@ export function Header() {
 
         <div className="header-actions">
           <a href={company.phoneHref} className="phone-link">
-            <Phone aria-hidden="true" size={18} />
             {company.phone}
           </a>
-          <ButtonLink href="/kontakt" icon={Phone}>
+          <ButtonLink href="/kontakt" icon={ArrowUpRight}>
             Offerte anfragen
           </ButtonLink>
         </div>
@@ -40,7 +39,7 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <a href={company.phoneHref}>{company.phone}</a>
+            <a href={company.phoneHref}>Jetzt anrufen</a>
             <Link href="/kontakt">Offerte anfragen</Link>
           </div>
         </details>

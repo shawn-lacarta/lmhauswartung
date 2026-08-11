@@ -11,13 +11,13 @@ export function Footer() {
           <div className="footer-brand">
             <Image src="/images/logo.png" alt="Logo von L.M. Hauswartung" width={466} height={186} />
             <p>
-              Persönliche Hauswartung, Reinigung, Gartenpflege und Unterhalt für Liegenschaften in Rümlang, Zürich
-              und Umgebung.
+              Hauswartung, Reinigung, Gartenpflege und Unterhalt für gepflegte Liegenschaften in
+              Rümlang, Zürich und Umgebung.
             </p>
           </div>
 
           <div className="footer-column">
-            <h2>Seiten</h2>
+            <h2>Navigation</h2>
             {navigation.map((item) => (
               <Link key={item.href} href={item.href}>
                 {item.label}

@@ -3,7 +3,6 @@ import {
   Hammer,
   Leaf,
   MapPin,
-  PanelsTopLeft,
   Phone,
   ShieldCheck,
   Sparkles,
@@ -25,8 +24,7 @@ export const company = {
 };
 
 export const navigation = [
-  { label: "Home", href: "/" },
-  { label: "Dienstleistungen", href: "/dienstleistungen" },
+  { label: "Leistungen", href: "/dienstleistungen" },
   { label: "Über uns", href: "/ueber-uns" },
   { label: "Kontakt", href: "/kontakt" }
 ];
@@ -99,29 +97,24 @@ export const services = [
 
 export const trustItems = [
   {
-    title: "Persönlicher Ansprechpartner",
-    text: "Direkte Kommunikation statt anonymer Abläufe.",
+    title: "Persönlich",
+    text: "Ein direkter Ansprechpartner für Ihre Liegenschaft.",
     icon: UserRoundCheck
   },
   {
-    title: "Zuverlässige Betreuung",
-    text: "Pünktlich, sorgfältig und mit Blick fürs Detail.",
+    title: "Zuverlässig",
+    text: "Regelmässige Betreuung mit sauberer Ausführung.",
     icon: ShieldCheck
   },
   {
-    title: "Fachgerechte Ausführung",
-    text: "Erfahrung und handwerkliches Können im Alltag.",
+    title: "Sorgfältig",
+    text: "Aufmerksam bei Reinigung, Pflege und Unterhalt.",
     icon: BadgeCheck
   },
   {
-    title: "Zürich & Umgebung",
-    text: "Lokal verankert in Rümlang und der Region Zürich.",
+    title: "Regional",
+    text: "Aus Rümlang für Zürich und Umgebung.",
     icon: MapPin
-  },
-  {
-    title: "Flexible Lösungen",
-    text: "Betreuung passend zur Liegenschaft und zum Bedarf.",
-    icon: PanelsTopLeft
   }
 ];
 

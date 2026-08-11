@@ -1,9 +1,8 @@
 import Image from "next/image";
 import { ArrowRight, CheckCircle2, MapPin, Phone } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
-import { SectionHeader } from "@/components/SectionHeader";
 import { ServiceCard } from "@/components/ServiceCard";
-import { company, serviceAreas, services, trustItems, values } from "@/lib/site-data";
+import { company, serviceAreas, services, trustItems } from "@/lib/site-data";
 
 export default function Home() {
   const structuredData = {
@@ -34,51 +33,67 @@ export default function Home() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      <section className="hero">
-        <div className="hero-image">
-          <Image
-            src="/images/hero-zuerich.jpeg"
-            alt="Wohnliegenschaft in Zürich als Symbol für professionelle Hauswartung"
-            fill
-            priority
-            sizes="100vw"
-          />
-        </div>
-        <div className="hero-content">
-          <p className="eyebrow">
-            <MapPin aria-hidden="true" size={16} /> Hauswartung aus Rümlang / Zürich
-          </p>
-          <h1>Zuverlässige Hauswartung in Zürich - persönlich, sauber, unkompliziert.</h1>
-          <p className="lead">
-            L.M. Hauswartung betreut Liegenschaften mit Reinigung, Unterhalt, Gartenpflege,
-            Solardachpflege und Kleinreparaturen. Direkt erreichbar, sorgfältig ausgeführt und lokal
-            verankert.
-          </p>
-          <div className="hero-actions">
-            <ButtonLink href="/kontakt" icon={ArrowRight}>
-              Offerte anfragen
-            </ButtonLink>
-            <ButtonLink href="/dienstleistungen" icon={CheckCircle2} variant="secondary">
-              Unsere Dienstleistungen
-            </ButtonLink>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+
+      <section className="home-hero">
+        <div className="container hero-grid">
+          <div className="hero-copy">
+            <p className="eyebrow">
+              <MapPin aria-hidden="true" size={16} /> Hauswartung · Zürich & Umgebung
+            </p>
+            <h1>Ihre Liegenschaft. Zuverlässig betreut.</h1>
+            <p className="lead">
+              L.M. Hauswartung kümmert sich um Reinigung, Gartenpflege, Solardachpflege und
+              Kleinreparaturen für gepflegte Wohnliegenschaften in Rümlang, Zürich und Umgebung.
+            </p>
+            <div className="hero-actions">
+              <ButtonLink href="/kontakt" icon={ArrowRight}>
+                Offerte anfragen
+              </ButtonLink>
+              <ButtonLink href="/dienstleistungen" icon={CheckCircle2} variant="light">
+                Leistungen ansehen
+              </ButtonLink>
+            </div>
+            <div className="hero-note">
+              <span className="note-mark">LM</span>
+              <p>
+                <strong>Direkt, lokal und unkompliziert.</strong>
+                <br />
+                Ein Ansprechpartner für die laufende Betreuung Ihrer Liegenschaft.
+              </p>
+            </div>
           </div>
-          <div className="hero-meta">
-            <span>Mo - Fr 08:00 - 17:00</span>
-            <span>Samstag nach Vereinbarung</span>
-            <span>{company.phone}</span>
+
+          <div className="hero-visual" aria-label="Bildkomposition Liegenschaftsbetreuung">
+            <div className="hero-photo">
+              <Image
+                src="/images/hero-zuerich.jpeg"
+                alt="Zürcher Wohnumfeld als regionaler Bezug für L.M. Hauswartung"
+                fill
+                priority
+                sizes="(max-width: 1080px) 100vw, 48vw"
+              />
+            </div>
+            <div className="hero-card">
+              <span>Für Eigentümer und Verwaltungen</span>
+              <strong>Hauswartung aus Rümlang</strong>
+              <ul className="hero-service-list">
+                {services.slice(0, 3).map((service) => (
+                  <li key={service.slug}>
+                    {service.title}
+                    <a href={`/dienstleistungen/${service.slug}`}>Details</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="section compact">
-        <div className="container trust-grid">
+      <section className="trust-strip" aria-label="Vertrauensmerkmale">
+        <div className="container trust-strip-inner">
           {trustItems.map((item) => (
-            <div className="trust-item" key={item.title}>
-              <item.icon aria-hidden="true" size={26} />
+            <div className="trust-strip-item" key={item.title}>
               <strong>{item.title}</strong>
               <span>{item.text}</span>
             </div>
@@ -88,55 +103,77 @@ export default function Home() {
 
       <section className="section alt">
         <div className="container">
-          <SectionHeader
-            eyebrow="Leistungen"
-            title="Alles Wichtige rund um Ihre Liegenschaft."
-            text="Klare Zuständigkeiten, verlässliche Ausführung und kurze Wege für Eigentümer, Verwaltungen und Bewohner."
-          />
-          <div className="services-grid">
-            {services.map((service) => (
-              <ServiceCard key={service.slug} service={service} />
+          <div className="section-header">
+            <div>
+              <p className="eyebrow">Leistungen</p>
+              <h2>Vier Bereiche, ein sauberer Ablauf.</h2>
+            </div>
+            <p>
+              Die wichtigsten Aufgaben rund um Ihre Liegenschaft sind klar gebündelt. So finden Sie
+              schnell die passende Unterstützung und können direkt eine Offerte anfragen.
+            </p>
+          </div>
+          <div className="service-bento">
+            {services.map((service, index) => (
+              <ServiceCard key={service.slug} service={service} index={index} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section dark">
+        <div className="container story-grid">
+          <div>
+            <p className="eyebrow">Warum L.M. Hauswartung?</p>
+            <h2>Betreuung, die im Alltag funktioniert.</h2>
+            <p>
+              Eine gute Hauswartung fällt vor allem dann auf, wenn alles zuverlässig erledigt ist:
+              saubere Zugänge, gepflegte Aussenbereiche und kleine Arbeiten, die nicht liegen
+              bleiben.
+            </p>
+            <ul className="benefit-list">
+              <li>
+                <span>01</span>
+                <div>
+                  <strong>Persönlicher Ansprechpartner</strong>
+                  <p>Kurze Wege, klare Rückmeldungen und direkte Abstimmung.</p>
+                </div>
+              </li>
+              <li>
+                <span>02</span>
+                <div>
+                  <strong>Sorgfältige Ausführung</strong>
+                  <p>Reinigung, Pflege und Unterhalt mit Blick für Details.</p>
+                </div>
+              </li>
+              <li>
+                <span>03</span>
+                <div>
+                  <strong>Unkomplizierte Zusammenarbeit</strong>
+                  <p>Passende Lösungen für Eigentümer, Verwaltungen und Privatkunden.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div className="story-image">
+            <Image
+              src="/images/reinigung-unterhalt.jpg"
+              alt="Sauber betreuter Innenbereich einer Wohnliegenschaft"
+              fill
+              sizes="(max-width: 1080px) 100vw, 44vw"
+            />
           </div>
         </div>
       </section>
 
       <section className="section">
-        <div className="container split">
+        <div className="container region-panel">
           <div>
-            <p className="eyebrow">Warum L.M. Hauswartung?</p>
-            <h2>Klein genug für persönlichen Kontakt, professionell genug für verlässliche Abläufe.</h2>
+            <p className="eyebrow">Regionalität</p>
+            <h2>Rümlang als Ausgangspunkt. Zürich im Fokus.</h2>
             <p className="muted">
-              Wir kümmern uns um Aufgaben, die im Alltag einer Liegenschaft schnell liegen bleiben:
-              Reinigung, Pflege, Kontrolle und kleinere Unterhaltsarbeiten. Eigentümer,
-              Verwaltungen und Bewohner erhalten einen Ansprechpartner, der zuhört und anpackt.
-            </p>
-            <div className="section-actions">
-              <ButtonLink href="/ueber-uns" icon={ArrowRight} variant="light">
-                Mehr über uns
-              </ButtonLink>
-            </div>
-          </div>
-          <div className="values-grid">
-            {values.map((value) => (
-              <article className="value-card" key={value.title}>
-                <value.icon aria-hidden="true" size={28} />
-                <h3>{value.title}</h3>
-                <p>{value.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section alt">
-        <div className="container area-band">
-          <div>
-            <p className="eyebrow">Regional</p>
-            <h2>Ihre Hauswartung aus der Region Zürich.</h2>
-            <p className="muted">
-              L.M. Hauswartung ist in Rümlang zuhause und betreut Kundinnen und Kunden in Zürich und
-              Umgebung. Weitere Einsätze werden nach Absprache geplant.
+              L.M. Hauswartung ist lokal verankert und betreut Liegenschaften in Rümlang, Zürich
+              und Umgebung. Die Nähe hilft bei Abstimmung, Planung und zuverlässigen Einsätzen.
             </p>
             <ul className="area-list">
               {serviceAreas.map((area) => (
@@ -144,46 +181,53 @@ export default function Home() {
               ))}
             </ul>
           </div>
-          <div className="stat-stack">
-            <div className="stat">
+          <div className="map-card" aria-label="Einsatzgebiet Rümlang, Zürich und Umgebung">
+            <div className="map-pin main">
               <strong>Rümlang</strong>
-              <span>Adresse: {company.address}</span>
+              <span>{company.address}</span>
             </div>
-            <div className="stat">
+            <div className="map-pin secondary">
               <strong>Zürich & Umgebung</strong>
-              <span>Lokale Betreuung für Liegenschaften und Aussenbereiche</span>
+              <span>Einsätze nach Absprache</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section alt">
+        <div className="container about-preview">
+          <div>
+            <p className="eyebrow">Über uns</p>
+            <h2>Ein kleines Team, das erreichbar bleibt.</h2>
+            <p className="lead">
+              L.M. Hauswartung steht für bodenständige Arbeit, persönlichen Kontakt und
+              zuverlässige Betreuung. Wir hören zu, klären den Bedarf und packen dort an, wo Ihre
+              Liegenschaft Unterstützung braucht.
+            </p>
+            <div className="section-actions">
+              <ButtonLink href="/ueber-uns" icon={ArrowRight} variant="light">
+                Mehr über uns
+              </ButtonLink>
+            </div>
+          </div>
+          <div className="about-metrics">
+            <div className="metric">
+              <span>Kontakt</span>
+              <strong>{company.phone}</strong>
+            </div>
+            <div className="metric">
+              <span>Öffnungszeiten</span>
+              <strong>Mo - Fr 08:00 - 17:00</strong>
             </div>
           </div>
         </div>
       </section>
 
       <section className="section">
-        <div className="container split">
-          <div className="image-panel">
-            <Image src="/images/ueber-uns.jpg" alt="Gepflegte Wohnanlage mit Terrassen und Aussenbereich" width={1100} height={900} />
-          </div>
+        <div className="container cta-panel">
           <div>
-            <p className="eyebrow">Über uns</p>
-            <h2>Ein engagiertes Team für gepflegte Immobilien.</h2>
-            <p className="muted">
-              Bei L.M. Hauswartung stehen Zuverlässigkeit, persönliche Betreuung und eine saubere
-              Ausführung im Mittelpunkt. Wir arbeiten bodenständig, direkt und mit dem Anspruch,
-              dass Ihre Liegenschaft jederzeit einen guten Eindruck macht.
-            </p>
-            <div className="section-actions">
-              <ButtonLink href="/ueber-uns" icon={ArrowRight} variant="light">
-                Das Team kennenlernen
-              </ButtonLink>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section deep">
-        <div className="container cta-band">
-          <div>
-            <h2>Sie suchen eine zuverlässige Betreuung für Ihre Liegenschaft?</h2>
-            <p>Gerne besprechen wir Ihre Situation und erstellen eine unverbindliche Offerte.</p>
+            <h2>Passt L.M. Hauswartung zu Ihrer Liegenschaft?</h2>
+            <p>Schreiben Sie kurz, worum es geht. Wir melden uns persönlich und unkompliziert.</p>
           </div>
           <div className="section-actions">
             <ButtonLink href="/kontakt" icon={ArrowRight}>
@@ -191,7 +235,7 @@ export default function Home() {
             </ButtonLink>
             <a className="button-secondary" href={company.phoneHref}>
               <Phone aria-hidden="true" size={18} />
-              Anrufen
+              Jetzt anrufen
             </a>
           </div>
         </div>

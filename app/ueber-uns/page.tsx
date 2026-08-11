@@ -15,11 +15,13 @@ export default function AboutPage() {
     <>
       <section className="page-hero">
         <div className="container page-hero-inner">
-          <p className="eyebrow">Das sind wir</p>
-          <h1>Persönliche Hauswartung mit Verantwortung und Sorgfalt.</h1>
+          <div>
+            <p className="eyebrow">Über uns</p>
+            <h1>Persönliche Hauswartung mit Verantwortung.</h1>
+          </div>
           <p>
-            Wir sind ein engagiertes Team, das Immobilien zuverlässig betreut und den direkten
-            Austausch mit Kundinnen und Kunden schätzt.
+            Ein kleines engagiertes Team aus der Region Zürich, das Liegenschaften sorgfältig
+            betreut und den direkten Austausch schätzt.
           </p>
         </div>
       </section>
@@ -27,15 +29,19 @@ export default function AboutPage() {
       <section className="section alt">
         <div className="container split">
           <div className="image-panel">
-            <Image src="/images/ueber-uns.jpg" alt="Gepflegte Wohnliegenschaft in der Region Zürich" width={1100} height={900} />
+            <Image
+              src="/images/ueber-uns.jpg"
+              alt="Gepflegte Wohnliegenschaft in der Region Zürich"
+              fill
+              sizes="(max-width: 1080px) 100vw, 48vw"
+            />
           </div>
           <div>
             <p className="eyebrow">Wer wir sind</p>
-            <h2>Ein erreichbarer Partner für Eigentümer, Verwaltungen und Bewohner.</h2>
+            <h2>Ein erreichbarer Partner für Eigentümer und Verwaltungen.</h2>
             <p className="muted">
-              Für uns bedeutet Hauswartung mehr als einzelne Aufgaben abzuarbeiten. Es geht darum,
-              Liegenschaften aufmerksam zu betreuen, kleine Dinge früh zu erkennen und Arbeiten
-              sauber auszuführen.
+              Für uns bedeutet Hauswartung, Liegenschaften aufmerksam zu betreuen, kleine Dinge früh
+              zu erkennen und Arbeiten sauber auszuführen.
             </p>
             <ul className="check-list">
               <li>
@@ -67,10 +73,10 @@ export default function AboutPage() {
               gepflegte Liegenschaft ausmachen.
             </p>
           </div>
-          <div className="values-grid">
-            {values.map((value) => (
+          <div className="value-timeline">
+            {values.map((value, index) => (
               <article className="value-card" key={value.title}>
-                <value.icon aria-hidden="true" size={28} />
+                <span className="service-number">{String(index + 1).padStart(2, "0")}</span>
                 <h3>{value.title}</h3>
                 <p>{value.text}</p>
               </article>
@@ -79,8 +85,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section deep">
-        <div className="container cta-band">
+      <section className="section">
+        <div className="container cta-panel">
           <div>
             <h2>Lassen Sie uns über Ihre Liegenschaft sprechen.</h2>
             <p>Wir beraten ehrlich, unkompliziert und passend zum tatsächlichen Bedarf.</p>
