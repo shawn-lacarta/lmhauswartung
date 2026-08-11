@@ -39,7 +39,7 @@ export default function Home() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">
-              <MapPin aria-hidden="true" size={16} /> Hauswartung · Zürich · Schweiz auf Anfrage
+              <MapPin aria-hidden="true" size={16} /> Hauswartung mit Sitz in Zürich · schweizweit auf Anfrage
             </p>
             <h1>Ihre Liegenschaft. Zuverlässig betreut.</h1>
             <p className="lead">
