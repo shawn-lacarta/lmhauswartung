@@ -485,6 +485,12 @@ p {
   gap: 18px;
 }
 
+.about-intro-section .image-stack .eyebrow {
+  color: var(--ink-soft);
+  font-size: clamp(1.1rem, 2vw, 1.28rem);
+  margin-bottom: 0;
+}
+
 .benefit-list {
   display: grid;
   gap: 0;
